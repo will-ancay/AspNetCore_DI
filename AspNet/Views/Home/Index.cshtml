@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<AspNetCore_DI.Models.Usuario>
+
+<h2>Usuários</h2>
+<table border="1" style="width:100%">
+    <tr>
+        <th>Nome</th>
+        <th>Sobrenome</th>
+        <th>Nascimento</th>
+        <th>Login</th>
+        <th></th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+            <td>@Html.DisplayFor(modelItem => item.Sobrenome)</td>
+            <td>@Html.DisplayFor(modelItem => item.Nascimento)</td>
+            <td>@Html.DisplayFor(modelItem => item.NomeUsuario)</td>
+        </tr>
+    }
+</table>
